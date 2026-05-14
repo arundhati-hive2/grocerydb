@@ -2,14 +2,14 @@
 
 create table categories (
     category_id int auto_increment primary key,
-    category_name varchar(255) not null,
+    category_name varchar(255) not null
 );
 
 create table suppliers (
     supplier_id int auto_increment primary key,
     supplier_name varchar(255) not null,
     supplier_email varchar(255) not null unique,
-    supplier_contact varchar(15) not null,
+    supplier_contact varchar(15) not null
 );
 
 create table products (
@@ -17,7 +17,7 @@ create table products (
     product_name varchar(255) not null,
     product_price decimal(10, 2) not null check (product_price > 0),
     category_id int,
-    foreign key (category_id) references categories(category_id),
+    foreign key (category_id) references categories(category_id)
 );
 
 create table inventory (
@@ -25,7 +25,7 @@ create table inventory (
     inventory_product_id int,
     inventory_threshold int not null check (inventory_threshold >= 0),
     inventory_quantity int not null check (inventory_quantity >= 0) default 0,
-    foreign key (inventory_product_id) references products(product_id),
+    foreign key (inventory_product_id) references products(product_id)
 );
 
 create table customers (
@@ -33,7 +33,7 @@ create table customers (
     customer_name varchar(255) not null unique,
     customer_email varchar(255) not null unique,
     customer_phone varchar(10) unique,
-    customer_loyalty_points int default 0,
+    customer_loyalty_points int default 0
 );
 
 create table transactions (
@@ -43,7 +43,7 @@ create table transactions (
     transaction_date date default current_date,
     transaction_quantity int not null check (transaction_quantity > 0),
     foreign key (transaction_product_id) references products(product_id),
-    foreign key (transaction_customer_id) references customers(customer_id),
+    foreign key (transaction_customer_id) references customers(customer_id)
 );
 
 -- altering tables
