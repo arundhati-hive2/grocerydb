@@ -75,10 +75,10 @@ values
 
 insert into products (product_name, product_price, category_id)
 values
-('Organic Spinach Bunch', 60.00, 1),
+('Rice Bag', 1500.00, 1),
 ('Buffalo Milk 1L', 80.00, 2),
-('Farm Eggs (12 pack)', 120.00, 2),
-('Rice Bag', 1500.00, 4);
+('Apple', 70.00, 3),
+('Organic Spinach Bunch', 60.00, 4);
 
 -- inventory
 
@@ -91,7 +91,7 @@ values
 (1, 10, 25),
 (2, 15, 40),
 (3, 20, 100),
-(4, 5, 12),
+(4, 5, 12);
 
 -- customers
 
@@ -103,7 +103,7 @@ insert into customers (
 values
 ('Nomlu Arahar', '9000055555', 95),
 ('Kiri Osdan', '9000066666', 410),
-('Saubal Hut', '9000077777'),
+('Saubal Hut', '9000077777', 0),
 ('Getset Kopje', '9000088888', 150);
 
 -- transactions
@@ -118,4 +118,4 @@ values
 (1, 1, '2026-05-10', 1),
 (3, 2, '2026-05-11', 2),
 (4, 3, '2026-05-12', 1),
-(2, 1, '2026-05-13', 1),
+(2, 1, '2026-05-13', 1);
