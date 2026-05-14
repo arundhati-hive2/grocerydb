@@ -1,0 +1,7 @@
+order:
+1. Categories
+2. Suppliers
+3. Products
+4. Inventory
+5. Customers
+6. Transactions
