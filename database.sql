@@ -69,7 +69,9 @@ values
 ('GreenHarvest Co', '1116543210', 'greenharvest@supplymail.com'),
 ('DairyPure Farms', '1113456780', 'dairypure@supplymail.com'),
 ('GoldenGrain Traders', '1118776655', 'goldengrain@supplymail.com'),
-('SnackSphere Ltd', '1119776655', 'snacksphere@supplymail.com');
+('SnackSphere Ltd', '1119776655', 'snacksphere@supplymail.com'),
+('BreadSphere Ltd', '1119779955', 'breadsphere@supplymail.com'),
+('FruitHouse', '1111434567', 'fruithouse@supplymail.com');
 
 -- products
 
@@ -77,7 +79,11 @@ insert into products (product_name, product_price, category_id)
 values
 ('Rice Bag', 1500.00, 1),
 ('Buffalo Milk 1L', 80.00, 2),
+('Wheat Flour 1kg', 120.00, 1),
+('Cheese Block 500g', 250.00, 2),
 ('Apple', 70.00, 3),
+('Banana Bunch', 50.00, 3),
+('Carrot Bunch', 40.00, 4),
 ('Organic Spinach Bunch', 60.00, 4);
 
 -- inventory
@@ -89,9 +95,13 @@ insert into inventory (
 )
 values
 (1, 10, 25),
-(2, 15, 40),
+(2, 25, 50),
+(7, 15, 40),
 (3, 20, 100),
-(4, 5, 12);
+(4, 10, 30),
+(5, 50, 200),
+(6, 30, 150),
+(8, 5, 12);
 
 -- customers
 
@@ -102,8 +112,12 @@ insert into customers (
 )
 values
 ('Nomlu Arahar', '9000055555', 95),
+('Bokul Binit', '9070060000', 120),
 ('Kiri Osdan', '9000066666', 410),
+('Raupal Binit', '9000070090', 0),
 ('Saubal Hut', '9000077777', 0),
+('Yeul Hut', '9000085000', 0),
+('Mokoro Market', '9090080000', 200),
 ('Getset Kopje', '9000088888', 150);
 
 -- transactions
@@ -117,5 +131,9 @@ insert into transactions (
 values
 (1, 1, '2026-05-10', 1),
 (3, 2, '2026-05-11', 2),
-(4, 3, '2026-05-12', 1),
-(2, 1, '2026-05-13', 1);
+(2, 3, '2026-05-11', 1),
+(7, 4, '2026-05-12', 1),
+(4, 7, '2026-05-12', 1),
+(5, 8, '2026-05-13', 10),
+(6, 5, '2026-05-13', 5),
+(8, 1, '2026-05-13', 1);
