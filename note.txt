@@ -1,7 +1,43 @@
-order:
-1. Categories
-2. Suppliers
-3. Products
-4. Inventory
-5. Customers
-6. Transactions
+1. categories
+category_id (PK)
+category_name
+
+2. suppliers
+supplier_id (PK)
+supplier_name
+supplier_email (UNIQUE)
+supplier_contact
+
+3. products
+product_id (PK)
+product_name
+product_price
+product_description
+category_id (FK to categories.category_id)
+supplier_id (FK to suppliers.supplier_id)
+
+4. inventory
+inventory_id (PK)
+inventory_product_id (FK to products.product_id)
+inventory_threshold
+inventory_quantity
+
+5. customers
+customer_id (PK)
+customer_name (UNIQUE)
+customer_phone (UNIQUE)
+customer_loyalty_points
+
+6. transactions
+transaction_id (PK)
+transaction_product_id (FK to products.product_id)
+transaction_customer_id (FK to customers.customer_id)
+transaction_date
+transaction_quantity
+
+RELATIONSHIPS
+categories to products (1 : many) 
+suppliers to products (1 : many) 
+products to inventory (1 : many)
+products to transactions (1 : many) 
+customers to transactions (1 : many) 

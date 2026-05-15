@@ -50,6 +50,8 @@ create table transactions (
 alter table products add product_description varchar(255);
 alter table customers drop column customer_email;
 alter table products modify product_name varchar(100);
+alter table products add supplier_id int;
+alter table products add foreign key (supplier_id) references suppliers(supplier_id);
 
 -- inserting data
 
